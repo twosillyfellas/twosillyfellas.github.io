@@ -11,7 +11,7 @@
         <h1>about:blank</h1>
         <div class="consolebody">
           <p>Enter a URL you want to be opened in a about:blank page below:</p>
-          <p class="console-input"><input id="url-target" value="letsgitsomegames.github.io" autocomplete="on" type="text" autofocus /></p>
+          <p class="console-input"><input id="url-target" value="letsgitsomeprxy.github.io" autocomplete="on" type="text" autofocus /></p>
           <p>Please make sure you have the https:// on the URL, it is best to just copy the link from the actual search bar!</p>
         </div>
       </div>
@@ -28,11 +28,10 @@
     <script>
       var url = document.getElementById("url-target");
       var urlObj = new window.URL(window.location.href);
-      document.getElementById("create").onclick = function () {
         if (url.value.substring(0, 8) !== 'https://' && url.value.substring(0, 7) !== 'http://') {
     		url.value = 'https://' + url.value.split('https://').pop();
         } else if (url.value.substring(0, 7) == 'http://'){
-        	url.value = 'https://letsgitsomeprxy.github.io';
+        	url.value = 'https://letsgitsomeprxy.github.io;
         };
         win = window.open();
         win.document.body.style.margin = "0";
