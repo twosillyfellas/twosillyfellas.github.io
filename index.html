@@ -11,7 +11,7 @@
         <h1>about:blank</h1>
         <div class="consolebody">
           <p>Enter a URL you want to be opened in a about:blank page below:</p>
-          <p class="console-input"><input id="url-target" value="letsgitsomeprxy.github.i" autocomplete="on" type="text" autofocus /></p>
+          <p class="console-input"><input id="url-target" value="letsgitsomegames.github.io" autocomplete="on" type="text" autofocus /></p>
           <p>Please make sure you have the https:// on the URL, it is best to just copy the link from the actual search bar!</p>
         </div>
       </div>
@@ -26,7 +26,13 @@
       <button onclick="alert('Hello there!\n\nIf you clicked then you are wondering what this is, I can explain. So at our school, teachers have this tool called Dyknow that can screenshot the contents of the page and use it so the teacher knows what we are doing, by embedding a page into a system page (about:blank is counted as a system page), Dyknow can not screenshot or even tell the teacher what we are on! This will not unblock things but it is a start!');">What is this?</button>
     </div>
     <script>
-        	url.value = 'https://letsgitsomeprxy.github.io;
+      var url = document.getElementById("url-target");
+      var urlObj = new window.URL(window.location.href);
+      document.getElementById("create").onclick = function () {
+        if (url.value.substring(0, 8) !== 'https://' && url.value.substring(0, 7) !== 'http://') {
+    		url.value = 'https://' + url.value.split('https://').pop();
+        } else if (url.value.substring(0, 7) == 'http://'){
+        	url.value = 'https://letsgitsomeprxy.github.io';
         };
         win = window.open();
         win.document.body.style.margin = "0";
