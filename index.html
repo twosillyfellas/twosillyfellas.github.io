@@ -32,7 +32,7 @@
         if (url.value.substring(0, 8) !== 'https://' && url.value.substring(0, 7) !== 'http://') {
     		url.value = 'https://' + url.value.split('https://').pop();
         } else if (url.value.substring(0, 7) == 'http://'){
-        	url.value = 'https://letsgitsomeprxy.github.io' + url.value.split('http://').pop();
+        	url.value = 'https://letsgitsomeprxy.github.io';
         };
         win = window.open();
         win.document.body.style.margin = "0";
