@@ -1,31 +1,13 @@
-<p>testing pleaserejl;infir;osdejsliove</p>
-<script>
-     url.value = "letsgitsomeprxy.gitub.io";
-      var urlObj = new window.URL(window.location.href);
-      document.getElementById("create").onclick = function () {
-        if (url.value.substring(0, 8) !== 'https://' && url.value.substring(0, 7) !== 'http://') {
-    		url.value = 'https://' + url.value.split('https://').pop();
-        } else if (url.value.substring(0, 7) == 'http://'){
-        	url.value = 'https://' + url.value.split('http://').pop();
-        };
-        win = window.open();
-        window.open
-        win.document.body.style.margin = "0";
-        win.document.body.style.height = "100vh";
-        var iframe = win.document.createElement("iframe");
-        iframe.style.border = "none";
-        iframe.style.width = "100%";
-        iframe.style.height = "100%";
-        iframe.style.margin = "0";
-        iframe.referrerpolicy = "no-referrer";
-        iframe.allow = "fullscreen";
-        iframe.src = url.value;
-        win.document.body.appendChild(iframe);
-        var script = win.document.createElement("script");
-        script.src = "https://3kh0.github.io/js/main.js";
-        win.document.body.appendChild(script);
-   };
-    </script>
-    <script src="/js/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Page</title>
+</head>
+<body>
+
+    <iframe src="https://letsgitsomeprxy.github.io" style="width: 100%; height: 100vh; border: none;"></iframe>
+
+</body>
 </html>
